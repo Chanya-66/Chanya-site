@@ -1,48 +1,391 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Biography Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chanya ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav>
-    <h2>Chanya</h2>
-    <a href="#about">About</a>
-    <a href="#journey">Journey</a>
-    <a href="#interests">Interests</a>
-    <a href="#projects">Projects</a>
+  <!-- Floating stars background -->
+  <div class="stars-bg" id="starsBg"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">chanya ✨</div>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#journey">journey</a>
+      <a href="#interests">interests</a>
+      <a href="#goals">goals</a>
+      <a href="#projects">projects</a>
+      <a href="#gallery">gallery</a>
+      <a href="#contact">contact</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
   </nav>
 
-  <section class="hero">
-    <h1>Hi, I'm Chanya</h1>
-    <p>Welcome to my personal biography website.</p>
-    <button>Explore My Story</button>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">about</a>
+    <a href="#journey" onclick="closeMobileMenu()">journey</a>
+    <a href="#interests" onclick="closeMobileMenu()">interests</a>
+    <a href="#goals" onclick="closeMobileMenu()">goals</a>
+    <a href="#projects" onclick="closeMobileMenu()">projects</a>
+    <a href="#gallery" onclick="closeMobileMenu()">gallery</a>
+    <a href="#contact" onclick="closeMobileMenu()">contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-placeholder">
+          <span>your photo here 🌸</span>
+        </div>
+        <div class="photo-ring ring1"></div>
+        <div class="photo-ring ring2"></div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-hello">hi there, i'm</p>
+        <h1 class="hero-name">Chanya <span class="wave">👋</span></h1>
+        <p class="hero-tagline">robotics student · dancer · drama addict · sushi obsessed 🍣</p>
+        <p class="hero-sub">sweetest person you'll meet — also the loudest one in the room ✨</p>
+        <div class="hero-btns">
+          <a href="#about" class="btn btn-primary">get to know me 🌸</a>
+          <a href="#contact" class="btn btn-outline">say hi 💌</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">scroll down ↓</div>
   </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write a short introduction about yourself here.</p>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="section-tag">✨ about me</div>
+      <h2 class="section-title">the girl behind the screen</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hey! I'm <strong>Chanya</strong> — a Robotics & Machine Intelligence student at <strong>NUS</strong>, and honestly, my journey here was anything but a straight line. From ITE to Singapore Poly to NUS, every step taught me something new about myself and what I'm capable of.</p>
+          <p>By day I'm debugging robots and building intelligent systems. By night I'm probably deep into a K-drama or Japanese series, crying over a friends-to-lovers storyline. No regrets. 💅</p>
+          <p>My friends would describe me as the <strong>sweetest person</strong> they know — but also one of the <strong>noisiest</strong> in the group (I promise I'm fun to be around). I love to tease and ragebaot my friends, and somehow they still keep me around. 😂</p>
+          <p>The two most important people in my world? My <strong>6-year-old sister</strong> who I love to death, and my <strong>mom</strong> — the one constant thing in my life. 🤍</p>
+        </div>
+        <div class="about-cards">
+          <div class="fact-card">
+            <span class="fact-emoji">💃</span>
+            <p>Trained Indian Classical Dancer</p>
+          </div>
+          <div class="fact-card">
+            <span class="fact-emoji">🤖</span>
+            <p>Robotics Engineer (real experience!)</p>
+          </div>
+          <div class="fact-card">
+            <span class="fact-emoji">🍣</span>
+            <p>Will never get tired of sushi (with wasabi + soy sauce, always)</p>
+          </div>
+          <div class="fact-card">
+            <span class="fact-emoji">🌶️</span>
+            <p>Spicy food + cheese girlie</p>
+          </div>
+          <div class="fact-card">
+            <span class="fact-emoji">🍛</span>
+            <p>Makes a mean homemade briyani</p>
+          </div>
+          <div class="fact-card">
+            <span class="fact-emoji">📺</span>
+            <p>Sucker for yearning love stories & friends-to-lovers</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="journey">
-    <h2>My Journey</h2>
-    <p>A timeline of important moments in your life or learning journey.</p>
+  <!-- JOURNEY -->
+  <section id="journey" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-tag">🌟 my journey</div>
+      <h2 class="section-title">how i got here</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot">🎓</div>
+          <div class="timeline-content">
+            <span class="timeline-year">2020 – 2022</span>
+            <h3>ITE — Nitec in Mechatronics & Robotics</h3>
+            <p>Where it all started. Fell in love with robotics and building things with my hands. Also won the Edusave Character Award and Director's List — not bad for a first step! 🌟</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">⚙️</div>
+          <div class="timeline-content">
+            <span class="timeline-year">2021 – 2022</span>
+            <h3>Mechanical Inspector @ Venture Corporation</h3>
+            <p>First real job — learned the importance of precision, quality, and attention to detail.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">🎓</div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022 – 2025</span>
+            <h3>Singapore Polytechnic — Diploma in Mechatronics</h3>
+            <p>Levelled up big time. Dived deep into engineering, took on leadership roles, mentored juniors in robotics and coding. Graduated proud. 🎉</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">🤖</div>
+          <div class="timeline-content">
+            <span class="timeline-year">Mar – Oct 2024</span>
+            <h3>Robotics Engineer → Integrations Engineer @ IFSC</h3>
+            <p>Built and deployed real robots. Developed a computer vision system for food tray detection. Trained new interns. Basically lived the robotics dream. 🚀</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">✈️</div>
+          <div class="timeline-content">
+            <span class="timeline-year">Apr – Jul 2025</span>
+            <h3>Aviation Screening Officer @ Certis</h3>
+            <p>Kept Changi Airport safe between engineering chapters. Discipline and responsibility — check! ✅</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">🌸</div>
+          <div class="timeline-content">
+            <span class="timeline-year">Aug 2025 →</span>
+            <h3>NUS — B.Eng Robotics & Machine Intelligence</h3>
+            <p>The big one. Building intelligent, real-world robotic systems at one of Asia's top universities. Current chapter — and the most exciting one yet. 💫</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <section id="interests">
-    <h2>My Interests</h2>
-    <p>Things you enjoy, hobbies, and passions.</p>
+  <!-- INTERESTS -->
+  <section id="interests" class="section">
+    <div class="section-inner">
+      <div class="section-tag">💖 interests</div>
+      <h2 class="section-title">things that make me, me</h2>
+      <div class="interests-grid">
+
+        <div class="interest-card">
+          <div class="interest-icon">📺</div>
+          <h3>dramas & series</h3>
+          <p>English, Korean, Japanese — I watch it all. Absolute sucker for yearning love stories and friends-to-lovers slowburns. If the characters almost confess in episode 8 and wait until episode 16, I am THERE. 😭</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">💃</div>
+          <h3>indian classical dance</h3>
+          <p>A trained dancer and proud of it. Dance taught me discipline, creativity, and perseverance — values I carry into everything I do. It keeps me grounded when engineering gets chaotic.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">🤖</div>
+          <h3>robotics & AI</h3>
+          <p>Not just a degree — a genuine passion. I love figuring out how intelligent systems can solve real-world problems. Building things that actually work? The best feeling ever.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">🍣</div>
+          <h3>food (especially sushi)</h3>
+          <p>Sushi is life. But ONLY with wasabi and soy sauce — no exceptions. Also love spicy food, cheese, and my own homemade briyani. Yes I will cook for you if we're close enough. 😌</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">👩‍💻</div>
+          <h3>building things</h3>
+          <p>Whether it's a robot, an Android app, or now a personal website — I love creating. Holiday projects included. Currently learning web development and genuinely having fun with it.</p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">🤍</div>
+          <h3>family & friends</h3>
+          <p>My people mean everything. My mom is my constant. My little sister is 6 and I love her to death. And my friends know that I'm the loudest + funniest one — I'll never let them forget it. 😂</p>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Show your school, coding, or personal projects here.</p>
+  <!-- GOALS -->
+  <section id="goals" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-tag">🎯 goals & bucket list</div>
+      <h2 class="section-title">dreaming big ✨</h2>
+      <div class="goals-grid">
+        <div class="goals-col">
+          <h3 class="goals-col-title">🎓 learning goals</h3>
+          <ul class="goals-list">
+            <li>✅ Get into NUS Engineering</li>
+            <li>⏳ Master machine learning & AI</li>
+            <li>⏳ Build a full robotics project from scratch</li>
+            <li>⏳ Learn web development (in progress! 🌸)</li>
+            <li>⏳ Get research experience in robotics</li>
+          </ul>
+        </div>
+        <div class="goals-col">
+          <h3 class="goals-col-title">🌍 life bucket list</h3>
+          <ul class="goals-list">
+            <li>⏳ Travel to Japan (sushi pilgrimage 🍣)</li>
+            <li>⏳ Watch a live K-drama filming</li>
+            <li>⏳ Perform on a big stage for dance</li>
+            <li>⏳ Cook briyani for 20+ people</li>
+            <li>⏳ Build something that helps real people</li>
+          </ul>
+        </div>
+        <div class="goals-col">
+          <h3 class="goals-col-title">💼 career goals</h3>
+          <ul class="goals-list">
+            <li>⏳ Work on robotics that impacts daily life</li>
+            <li>⏳ Lead a team on a real engineering project</li>
+            <li>⏳ Intern at a robotics/AI company</li>
+            <li>⏳ Eventually mentor others like I was mentored</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <div class="section-tag">🛠 projects</div>
+      <h2 class="section-title">things i've built</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-emoji">🤖</div>
+          <h3>Computer Vision — Food Tray Detection</h3>
+          <p>Developed a CV system to detect food trays as part of my work at IFSC. Real-world robotics in a real deployment environment. Super proud of this one.</p>
+          <div class="project-tags">
+            <span>Computer Vision</span>
+            <span>Robotics</span>
+            <span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-emoji">⚙️</div>
+          <h3>2-in-1 Robot Assembly & Deployment</h3>
+          <p>Oversaw the full assembly-to-deployment pipeline for 2-in-1 robots at IFSC. From hardware troubleshooting to final deployment sign-off.</p>
+          <div class="project-tags">
+            <span>Embedded Systems</span>
+            <span>Hardware</span>
+            <span>Integration</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-emoji">📱</div>
+          <h3>Android App (SP Diploma Project)</h3>
+          <p>Built an Android app using Android Studio during my diploma. First taste of software development — and clearly not the last. 😄</p>
+          <div class="project-tags">
+            <span>Android Studio</span>
+            <span>Java/Kotlin</span>
+            <span>Mobile</span>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-emoji">🌸</div>
+          <h3>This Website! ✨</h3>
+          <p>A personal biography site built from scratch during the holidays. My very first website — HTML, CSS, JavaScript. Deployed on GitHub Pages. Learning in public! 🚀</p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>GitHub Pages</span>
+          </div>
+        </div>
+
+      </div>
+      <p class="projects-note">More projects coming as I grow! This page will keep updating. 🌱</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-tag">📸 gallery</div>
+      <h2 class="section-title">moments & memories</h2>
+      <p class="gallery-sub">Add your favourite photos here — dance performances, travels, friends, food, anything that's YOU 🌸</p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <span>📸</span>
+            <p>add a photo</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <span>💃</span>
+            <p>dance moment</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <span>🍣</span>
+            <p>sushi date</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <span>🤖</span>
+            <p>robotics life</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <span>🤍</span>
+            <p>fam & friends</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <span>✨</span>
+            <p>a vibe</p>
+          </div>
+        </div>
+      </div>
+      <p class="gallery-note">💡 To add real photos: replace the gallery-placeholder divs with <code>&lt;img src="your-photo.jpg"&gt;</code></p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-inner contact-inner">
+      <div class="section-tag">💌 contact</div>
+      <h2 class="section-title">say hello!</h2>
+      <p class="contact-sub">Whether you want to talk robotics, dramas, sushi recommendations, or just vibe — I'm here 🌸</p>
+      <div class="contact-links">
+        <a href="mailto:chanyas315@gmail.com" class="contact-card">
+          <span class="contact-icon">📧</span>
+          <span>chanyas315@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/chanyaselvan" target="_blank" class="contact-card">
+          <span class="contact-icon">💼</span>
+          <span>LinkedIn — chanyaselvan</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>Made by Chanya</p>
+    <p>made with 💖 by chanya · built during the holidays ✨</p>
+    <p class="footer-sub">from ITE → SP → NUS · one step at a time 🌸</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

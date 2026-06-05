@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <!-- Cursor sparkle -->
+  <canvas id="sparkleCanvas"></canvas>
+
   <!-- Floating stars background -->
   <div class="stars-bg" id="starsBg"></div>
 
@@ -52,8 +55,8 @@
       <div class="hero-text">
         <p class="hero-hello">hi there, i'm</p>
         <h1 class="hero-name">Chanya <span class="wave">👋</span></h1>
-        <p class="hero-tagline">robotics student · dancer · drama addict · sushi obsessed 🍣</p>
-        <p class="hero-sub">sweetest person you'll meet — also the loudest one in the room ✨</p>
+        <p class="hero-tagline" id="typedTagline"></p>
+        <p class="hero-sub">if you laugh, i laugh. if you cry, i cry. that's just how i love 🤍</p>
         <div class="hero-btns">
           <a href="#about" class="btn btn-primary">get to know me 🌸</a>
           <a href="#contact" class="btn btn-outline">say hi 💌</a>
@@ -62,6 +65,18 @@
     </div>
     <div class="hero-scroll">scroll down ↓</div>
   </section>
+
+  <!-- NOW PLAYING / VIBES BAR -->
+  <div class="vibes-bar">
+    <span class="vibes-label">✨ current vibes</span>
+    <div class="vibes-pills">
+      <span class="vibe-pill">☕ coffee mode</span>
+      <span class="vibe-pill">📺 drama binging</span>
+      <span class="vibe-pill">🇰🇷 korea in 2 weeks!!</span>
+      <span class="vibe-pill">🤖 robotics student</span>
+      <span class="vibe-pill">🍣 always craving sushi</span>
+    </div>
+  </div>
 
   <!-- ABOUT -->
   <section id="about" class="section">
@@ -72,8 +87,8 @@
         <div class="about-text">
           <p>Hey! I'm <strong>Chanya</strong> — a Robotics & Machine Intelligence student at <strong>NUS</strong>, and honestly, my journey here was anything but a straight line. From ITE to Singapore Poly to NUS, every step taught me something new about myself and what I'm capable of.</p>
           <p>By day I'm debugging robots and building intelligent systems. By night I'm probably deep into a K-drama or Japanese series, crying over a friends-to-lovers storyline. No regrets. 💅</p>
-          <p>My friends would describe me as the <strong>sweetest person</strong> they know — but also one of the <strong>noisiest</strong> in the group (I promise I'm fun to be around). I love to tease and ragebaot my friends, and somehow they still keep me around. 😂</p>
-          <p>The two most important people in my world? My <strong>6-year-old sister</strong> who I love to death, and my <strong>mom</strong> — the one constant thing in my life. 🤍</p>
+          <p>I'm someone who laughs with you when you laugh, and cries with you when you cry — that's just how I show up for people. I love surprising the ones I care about in the best ways. 🤍</p>
+          <p>The two most important people in my world? My <strong>6-year-old sister</strong> who I love to death, and my <strong>mom</strong> — the one constant thing in my life. Everything I do, I do with them in mind.</p>
         </div>
         <div class="about-cards">
           <div class="fact-card">
@@ -86,19 +101,19 @@
           </div>
           <div class="fact-card">
             <span class="fact-emoji">🍣</span>
-            <p>Will never get tired of sushi (with wasabi + soy sauce, always)</p>
+            <p>Sushi obsessed — always with wasabi & soy sauce</p>
           </div>
           <div class="fact-card">
-            <span class="fact-emoji">🌶️</span>
-            <p>Spicy food + cheese girlie</p>
+            <span class="fact-emoji">☕</span>
+            <p>Coffee lover & tiramisu girlie</p>
           </div>
           <div class="fact-card">
             <span class="fact-emoji">🍛</span>
-            <p>Makes a mean homemade briyani</p>
+            <p>Can cook — and mom's biryani is the gold standard</p>
           </div>
           <div class="fact-card">
-            <span class="fact-emoji">📺</span>
-            <p>Sucker for yearning love stories & friends-to-lovers</p>
+            <span class="fact-emoji">🎁</span>
+            <p>Loves surprising people in the best ways</p>
           </div>
         </div>
       </div>
@@ -196,21 +211,21 @@
         </div>
 
         <div class="interest-card">
-          <div class="interest-icon">🍣</div>
-          <h3>food (especially sushi)</h3>
-          <p>Sushi is life. But ONLY with wasabi and soy sauce — no exceptions. Also love spicy food, cheese, and my own homemade briyani. Yes I will cook for you if we're close enough. 😌</p>
+          <div class="interest-icon">☕</div>
+          <h3>coffee & good food</h3>
+          <p>Coffee is non-negotiable. Tiramisu? My love language. Sushi with wasabi and soy sauce, spicy food, cheese, and mom's biryani — the gold standard that no restaurant can beat. 🍛</p>
         </div>
 
         <div class="interest-card">
-          <div class="interest-icon">👩‍💻</div>
-          <h3>building things</h3>
-          <p>Whether it's a robot, an Android app, or now a personal website — I love creating. Holiday projects included. Currently learning web development and genuinely having fun with it.</p>
+          <div class="interest-icon">✈️</div>
+          <h3>travel & new experiences</h3>
+          <p>Korea in 2 weeks and I'm already screaming internally. 🇰🇷 Love discovering new places, food, cultures — and making memories that last forever.</p>
         </div>
 
         <div class="interest-card">
           <div class="interest-icon">🤍</div>
-          <h3>family & friends</h3>
-          <p>My people mean everything. My mom is my constant. My little sister is 6 and I love her to death. And my friends know that I'm the loudest + funniest one — I'll never let them forget it. 😂</p>
+          <h3>people & connections</h3>
+          <p>I show up fully for the people I love. Laugh when you laugh, cry when you cry. I love surprising people in the best ways — it's my thing. My mom and little sister are my whole world. 🌸</p>
         </div>
 
       </div>
@@ -234,22 +249,23 @@
           </ul>
         </div>
         <div class="goals-col">
-          <h3 class="goals-col-title">🌍 life bucket list</h3>
+          <h3 class="goals-col-title">🌍 bucket list</h3>
           <ul class="goals-list">
-            <li>⏳ Travel to Japan (sushi pilgrimage 🍣)</li>
-            <li>⏳ Watch a live K-drama filming</li>
+            <li>🇰🇷 Go to Korea — <strong>happening in 2 weeks!!</strong> 🎉</li>
+            <li>⏳ Thailand trip with friends</li>
+            <li>⏳ Japan (sushi pilgrimage 🍣)</li>
+            <li>⏳ Experience a real love story 💕</li>
             <li>⏳ Perform on a big stage for dance</li>
-            <li>⏳ Cook briyani for 20+ people</li>
             <li>⏳ Build something that helps real people</li>
           </ul>
         </div>
         <div class="goals-col">
           <h3 class="goals-col-title">💼 career goals</h3>
           <ul class="goals-list">
+            <li>⏳ Land a high-paying job I actually love</li>
             <li>⏳ Work on robotics that impacts daily life</li>
             <li>⏳ Lead a team on a real engineering project</li>
-            <li>⏳ Intern at a robotics/AI company</li>
-            <li>⏳ Eventually mentor others like I was mentored</li>
+            <li>⏳ Intern at a top robotics/AI company</li>
           </ul>
         </div>
       </div>
@@ -340,8 +356,8 @@
         </div>
         <div class="gallery-item">
           <div class="gallery-placeholder">
-            <span>🤖</span>
-            <p>robotics life</p>
+            <span>🇰🇷</span>
+            <p>korea soon!!</p>
           </div>
         </div>
         <div class="gallery-item">
@@ -352,8 +368,8 @@
         </div>
         <div class="gallery-item">
           <div class="gallery-placeholder">
-            <span>✨</span>
-            <p>a vibe</p>
+            <span>☕</span>
+            <p>coffee o'clock</p>
           </div>
         </div>
       </div>
@@ -366,7 +382,7 @@
     <div class="section-inner contact-inner">
       <div class="section-tag">💌 contact</div>
       <h2 class="section-title">say hello!</h2>
-      <p class="contact-sub">Whether you want to talk robotics, dramas, sushi recommendations, or just vibe — I'm here 🌸</p>
+      <p class="contact-sub">Whether you want to talk robotics, dramas, sushi spots, or just vibe — I'm here 🌸</p>
       <div class="contact-links">
         <a href="mailto:chanyas315@gmail.com" class="contact-card">
           <span class="contact-icon">📧</span>
@@ -376,6 +392,13 @@
           <span class="contact-icon">💼</span>
           <span>LinkedIn — chanyaselvan</span>
         </a>
+      </div>
+
+      <!-- FUN QUOTE GENERATOR -->
+      <div class="quote-box" id="quoteBox">
+        <p class="quote-label">✨ a little something from me</p>
+        <p class="quote-text" id="quoteText">"If you laugh, I laugh. If you cry, I cry. That's just me."</p>
+        <button class="btn btn-primary" onclick="newQuote()" style="margin-top:16px;">another one ✨</button>
       </div>
     </div>
   </section>

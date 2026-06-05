@@ -819,6 +819,100 @@ nav.scrolled {
 }
 
 /* =====================
+   SPARKLE CURSOR
+   ===================== */
+#sparkleCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* =====================
+   VIBES BAR
+   ===================== */
+.vibes-bar {
+  background: linear-gradient(135deg, rgba(249,184,212,0.25), rgba(201,184,249,0.25));
+  border-top: 1px solid rgba(201,184,249,0.3);
+  border-bottom: 1px solid rgba(201,184,249,0.3);
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.vibes-label {
+  font-weight: 900;
+  font-size: 0.85rem;
+  color: var(--lavender-deep);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.vibes-pills {
+  display: flex;
+  gap: 10px;
+  animation: scrollPills 18s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scrollPills {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.vibe-pill {
+  background: white;
+  border: 1.5px solid rgba(201,184,249,0.4);
+  color: var(--text);
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 6px 16px;
+  border-radius: 50px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(160,100,200,0.08);
+}
+
+/* =====================
+   QUOTE BOX
+   ===================== */
+.quote-box {
+  margin-top: 60px;
+  background: linear-gradient(135deg, rgba(249,184,212,0.15), rgba(201,184,249,0.15));
+  border: 2px dashed rgba(201,184,249,0.5);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.quote-label {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--lavender-deep);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 60px;
+  transition: opacity 0.3s;
+}
+
+/* =====================
    FOOTER
    ===================== */
 footer {
